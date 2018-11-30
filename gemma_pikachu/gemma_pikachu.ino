@@ -133,7 +133,7 @@ void Mode_ColourFade() {
   // Fade in or out depending on the current fade direction
   brightness += isFadeIn ? 5 : -5;
    
-  if(brightness < 0 || brightness > 60) {    
+  if(brightness < 0 || brightness > BRIGHTNESS_DEFAULT) {    
     isFadeIn = !isFadeIn;
   } else {
     ring.setBrightness(brightness);
